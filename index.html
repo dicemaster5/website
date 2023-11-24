@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="./assets/images/myface.jpg" />
+	<title>Sam Auber</title>
+	<meta name="description" content="Another game developer portfolio website.">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script src="https://kit.fontawesome.com/7af026b303.js" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./css/styleSheet.css">
+
+	<!-- <script defer src="./js/script.js"></script> -->
+</head>
+
+<body>
+	<div id="main-content">
+		<div id="main-text">
+			<h1 id="main-name">
+				Sam Auber
+			</h1>
+			<p id="main-sub-text">
+				Game Developer & Digital Artist
+			</p>
+		</div>
+		<div id="main-image" class="basic-protect">
+			<img id="image" draggable="false" src="assets/images/DragonNoodle.jpg">
+		</div>
+		
+		<div id="main-navbar">
+			<button onclick="toggleSection('about-section')" class="main-navbar-button">about</button>
+			/
+			<button onclick="toggleSection('games-section')" class="main-navbar-button">work</button>
+			/
+			<button onclick="toggleSection('art-section')" class="main-navbar-button">art</button>
+			/
+			<button onclick="location.href='assets/SamAuberResume.pdf'" class="main-navbar-button">resume</button>
+		</div>
+
+		<div class="toggle-section" id="about-section" style="display: none;">
+			
+			<div id="text-and-image">
+				<div id="my-face-img" class="basic-protect">
+					<img src="assets/images/myface.jpg" draggable="false" alt="Me">
+				</div>
+				<div id="about-text">
+					<p>
+						Yo! I'm Sam!
+						<br>
+						I'm a game developer and digital artist, with a passion for creating unique 
+						player experiences with immersive and artistic environments.
+						<!-- <br><br>
+						I'm all about game juice and making games feel good to play! -->
+						<br><br>
+						With 6+ years of experience in various aspects of game development, I've worked with diverse teams, 
+						from tiny 3 person indies to large corporate owned studio working on big IP's.
+						<br><br>
+						Get in touch and let's make some games together!
+						<!-- <br><br>
+						Some of my favourite games include: Hollow Knight, FTL, Inside, Abzû and Sekiro -->
+					</p>
+					<div id="media-links">
+						<div class="icon-link">
+							<a class="icon-link" href="mailto:samauber@yahoo.co.uk" target="_blank">
+								<i class="far fa-envelope fa-xl"></i>
+							</a>
+						</div>
+
+						<div class="icon-link">
+							<a class="icon-link" href="https://twitter.com/DicedBasilisk" target="_blank">
+								<i class="fa-brands fa-twitter fa-xl"></i>
+							</a>
+						</div>
+
+						<div class="icon-link">
+							<a class="icon-link" href="https://digitalbasilisk.itch.io/" target="_blank">
+								<i class="fa-brands fa-itch-io fa-xl"></i>
+							</a>
+						</div>
+
+						<div class="icon-link">
+							<a class="icon-link" href="https://www.linkedin.com/in/sam-auber/" target="_blank">
+								<i class="fa-brands fa-linkedin fa-xl"></i>
+							</a>
+						</div>
+
+						<div class="icon-link">
+							<a class="icon-link" href="https://github.com/dicemaster5" target="_blank">
+								<i class="fa-brands fa-github fa-xl"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="toggle-section" id="games-section" style="display: none;">
+			
+			<!-- SONIC FORCES -->
+			<a href="https://play.google.com/store/apps/details?id=com.sega.sprint&hl=en&gl=US" target="_blank">
+				<div class="game-container">
+					<div class="game-image">
+						<img src='assets/images/sonicForces.png' alt="Sonic Forces">
+					</div>
+					<div class="game-info">
+						<h3 class="game-info-title">Sonic Forces: Speed Battles</h3>
+						<p>A casual multiplayer racing & battle game from SEGA! Run, race, and compete in multiplayer 
+							running games with real players from around the world!</p>
+					</div>
+				</div>
+			</a>
+
+			<!-- PPC GAME -->
+			<a href="https://dangerzone-ga.itch.io/ppc" target="_blank">
+				<div class="game-container">
+					<div class="game-info">
+						<h3 class="game-info-title">Planetary Pest Control</h3>
+						<p>Asymmetrical 2-player couch-coop action! 2 Unique characters with distinctive abilities and 
+							synergies An exciting story set over 6 levels, with up to 2 hours of gameplay! A striking comic 
+							book style set on a vibrant fungal planet</p>
+					</div>
+					<div class="game-image">
+						<img src='assets/images/PPC.png' alt="Zephyr">
+					</div>
+				</div>
+			</a>
+
+			<!-- ZEPHYR GAME -->
+			<a href="https://endclouddigital.itch.io/zephyr-the-cloud-odyssey" target="_blank">
+				<div class="game-container">
+					<div class="game-image">
+						<img src='assets/images/Zephyr.png' alt="Zephyr">
+					</div>
+					<div class="game-info">
+						<h3 class="game-info-title">Zephyr: the cloud odyssey</h3>
+						<p>First person speedrunning platformer in which the player is tasked with traversing floating islands and
+							avoiding dangerous traps in order to find artefact pieces in as quickly as possible.</p>
+					</div>
+				</div>
+			</a>
+
+			<!-- LOST TO BE FOUND -->
+			<a href="https://jiheh.itch.io/lost-to-be-found" target="_blank">
+				<div class="game-container">
+					<div class="game-info">
+						<h3 class="game-info-title">Lost To Be Found</h3>
+						<p>A short relaxing treasure hunting game made for the 2021 Global Game Jam.
+							Made in a team of 3 at the Spelkollektivet game dev house. You can play it in your browser right now!
+						</p>
+					</div>
+					<div class="game-image">
+						<img src='https://img.itch.zone/aW1hZ2UvOTA1MjU1LzUxMTQwMDcucG5n/original/nVV%2BLy.png' alt="game">
+					</div>
+				</div>
+			</a>
+			
+		</div>
+
+		<div class="toggle-section" id="art-section" style="display: none;">
+			~Artwork goes here~
+		</div>
+		
+		<script>
+			/* Disable right-click menu on page */
+			document.addEventListener('contextmenu', function (event) {
+				event.preventDefault()
+			});
+
+			var sectionList = ["about-section", "games-section", "art-section"];
+		
+			let images = [
+				'assets/images/3DCreature.jpg',
+				'assets/images/PPC.png',
+				'assets/images/Zephyr.png',
+				'assets/images/bobot.jpg',
+				'assets/images/DragonNoodle.jpg'
+			];
+
+			let index = -1;
+			const imgElement = document.querySelector('#image');
+
+			function change() {
+				index === images.length - 1 ? index = 0 : index++;
+				imgElement.src = images[index];
+			}
+
+			window.onload = function () {
+				setInterval(change, 10000);
+			};
+
+			function toggleSection(element) {	
+				sectionList.forEach(function (section) {
+					if(element === section)
+						return;
+					x = document.getElementById(section);					
+					if(x.style.display !== "none"){
+						x.style.display = "none";
+					}
+				});
+
+				var x = document.getElementById(element);
+				if (x.style.display === "none") {
+					x.style.display = "block";
+				} else {
+					x.style.display = "none";
+				}
+			}
+		</script>
+	</div>
+</body>
