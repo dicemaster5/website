@@ -26,7 +26,7 @@
 			</p>
 		</div>
 		<div id="main-image" class="basic-protect">
-			<img id="image" draggable="false" src="assets/images/DragonNoodle.jpg">
+			<img id="changing-image" class="basic-protect" draggable="false" src="">
 		</div>
 		
 		<div id="main-navbar">
@@ -51,15 +51,11 @@
 						<br>
 						I'm a game developer and digital artist, with a passion for creating unique 
 						player experiences with immersive and artistic environments.
-						<!-- <br><br>
-						I'm all about game juice and making games feel good to play! -->
 						<br><br>
 						With 6+ years of experience in various aspects of game development, I've worked with diverse teams, 
 						from tiny 3 person indies to large corporate owned studio working on big IP's.
 						<br><br>
-						Get in touch and let's make some games together!
-						<!-- <br><br>
-						Some of my favourite games include: Hollow Knight, FTL, Inside, Abzû and Sekiro -->
+						Get in touch and let's make some games!
 					</p>
 					<div id="media-links">
 						<div class="icon-link">
@@ -159,7 +155,27 @@
 		</div>
 
 		<div class="toggle-section" id="art-section" style="display: none;">
-			~Artwork goes here~
+			<!-- ~Artwork goes here~ -->
+			<div class="row">
+				<div class="column">
+					<img src="/assets/images/dragonface.jpg" style="width:100%">
+					<img src="/assets/images/DragonNoodle.jpg" style="width:100%">
+					<img src="/assets/images/oni2d.png" style="width:100%">
+					<img src="/assets/images/basilisk.jpg" style="width:100%">
+				</div>
+				<div class="column">
+					<img src="/assets/images/3DCreature.jpg" style="width:100%">
+					<img src="/assets/images/dragon.jpg" style="width:100%">
+					<!-- <img src="/assets/images/oni.png" style="width:100%"> -->
+					<img src="/assets/images/vampire.jpg" style="width:100%">
+				</div>
+				<div class="column">
+					<img src="/assets/images/pumpkins.png" style="width:100%">
+					<img src="/assets/images/2DCreature.jpg" style="width:100%">
+					<img src="/assets/images/bobot.jpg" style="width:100%">
+					<img src="/assets/images/kaiju.jpg" style="width:100%">
+				</div>
+			</div>
 		</div>
 		
 		<script>
@@ -172,22 +188,28 @@
 		
 			let images = [
 				'assets/images/3DCreature.jpg',
-				'assets/images/PPC.png',
-				'assets/images/Zephyr.png',
 				'assets/images/bobot.jpg',
-				'assets/images/DragonNoodle.jpg'
+				'assets/images/DragonNoodle.jpg',
+				'assets/images/hellohand.jpg'
 			];
 
 			let index = -1;
-			const imgElement = document.querySelector('#image');
+			const imgElement = document.querySelector('#changing-image');
 
 			function change() {
 				index === images.length - 1 ? index = 0 : index++;
 				imgElement.src = images[index];
 			}
 
+			function getRandomImage(imgAr) {
+				var num = Math.floor(Math.random() * imgAr.length);
+				var img = imgAr[num];
+				imgElement.src = imgAr[num];
+			}
+
 			window.onload = function () {
-				setInterval(change, 10000);
+				getRandomImage(images);
+				//setInterval(change, 10000);
 			};
 
 			function toggleSection(element) {	
