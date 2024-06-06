@@ -8,19 +8,18 @@ html {
 }
 
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: rgb(31, 31, 31);
-  font-family: "IBM Plex Serif";
-  color: rgb(255, 255, 255);
-  align-items: center;
-
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: rgb(31, 31, 31);
+	font-family: "IBM Plex Serif";
+	/* font-family: "Segoe UI", sans-serif, verdana; alt font */
+	color: rgb(255, 255, 255);
+	align-items: center;
 }
 
 a {
 	color: rgb(255, 255, 255);
-	font-family: "IBM Plex Serif";
 	text-decoration: none;
 }
 
@@ -38,7 +37,7 @@ a {
 
 #main-content {
 	/* background-color: rgb(184, 40, 40); */
-	margin: auto auto;
+	margin: auto;
 	flex-direction: column;
 	gap: 75px;
 	max-width: 800px;
@@ -52,25 +51,25 @@ a {
 	color: orange;
 }
 
-#main-image	{
-	display: flex;
-	width: auto;
-	height: 400px;
-	max-height: 400px;
-	flex: 20%;
+#main-image-container {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width: fit-content;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #changing-image {
-  	margin-left: auto;
-  	margin-right: auto;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
 	object-fit: contain;
-	object-position: center;
-	width: auto;
-	height: auto;
-	max-width: 100%;
-	max-height: 100%;
-	border-radius: 10px;
-	/* overflow: clip; */
+	width: 100%;
+	max-height:  400px;
+
+	border-radius: 20px;
+	overflow: clip;
 }
 
 #main-text	{
@@ -87,32 +86,27 @@ a {
 	display: block;
 	text-align: center;
 	font-size: larger;
-	margin-top: 20px;
-	font-size: 25px;
 	cursor: default;
+	margin-bottom: 20px;
 }
 
 .main-navbar-button	{
 	display: inline;
 	font-size: 25px;
-	color: rgb(141, 141, 141);
+	color: rgb(148, 148, 148);
 	background-color: transparent;
-	font-family: "IBM Plex Serif";
-	text-decoration: none;
+	font-family: inherit;
 	border: none;
 	transition: transform .2s cubic-bezier(.53,.41,.61,1.73);
 }
 
 
-
 /* Toggle section */
 
 .toggle-section {
-	margin-top: 20px;
 	padding: 10px;
 	border-radius: 5px;
-	font-size: 16px;
-	/* background-color: rgb(73, 73, 73); */
+	/* background-color: rgba(73, 73, 73, 0.288); */
 }
 
 /* About Section */
@@ -132,12 +126,20 @@ a {
 
 #my-face-img {
 	margin: 10px;
-	width: 500px;
+}
+
+/* Hides my face when below 600px width */
+@media only screen and (max-width: 600px) {
+	#my-face-img {
+		display: none;
+	}
 }
 
 #my-face-img img {
 	border-radius: 200px;
-	max-width: 100%;
+	width: 200px;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 #media-links {
@@ -161,33 +163,28 @@ a {
 	transition: transform .25s;
 }
 
-
-.game-info {
-	margin: 10px;
-	width: 66%;
-	overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .game-info-title {
 	color: orange;
 	margin: auto;
 }
 
+.game-info {
+	margin: 10px;
+	width: 66.66%;
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .game-image {
-	display: flex;
-	width: 33%;
+	width: 33.33%;
 	padding: 10px;
 }
 
 .game-image img{
-  	margin-left: auto;
-  	margin-right: auto;
 	object-fit: cover;
-	object-position: center;
-	width: 100%;
+	width:100%;
+	height:100%;
 	border-radius: 10px;
-	overflow: clip;
 }
 
 /* Art Section */
@@ -210,6 +207,8 @@ a {
   margin-top: 8px;
   vertical-align: middle;
 }
+
+/* hover elements */
 
 @media (hover: hover) and (pointer: fine) {
 

@@ -25,14 +25,14 @@
 				Game Developer & Digital Artist
 			</p>
 		</div>
-		<div id="main-image" class="basic-protect">
+		<div id="main-image-container" class="basic-protect">
 			<img id="changing-image" class="basic-protect" draggable="false" src="">
 		</div>
-		
+
 		<div id="main-navbar">
 			<button onclick="toggleSection('about-section')" class="main-navbar-button">about</button>
 			/
-			<button onclick="toggleSection('games-section')" class="main-navbar-button">work</button>
+			<button onclick="toggleSection('games-section')" class="main-navbar-button">games</button>
 			/
 			<button onclick="toggleSection('art-section')" class="main-navbar-button">art</button>
 			/
@@ -40,7 +40,6 @@
 		</div>
 
 		<div class="toggle-section" id="about-section" style="display: none;">
-			
 			<div id="text-and-image">
 				<div id="my-face-img" class="basic-protect">
 					<img src="assets/images/myface.jpg" draggable="false" alt="Me">
@@ -52,8 +51,8 @@
 						I'm a game developer and digital artist, with a passion for creating unique 
 						player experiences with immersive and artistic environments.
 						<br><br>
-						With 6+ years of experience in various aspects of game development, I've worked with diverse teams, 
-						from tiny 3 person indies to a large corporate owned studio working on big IP's.
+						With over six years of experience in various aspects of game development, I've worked with diverse teams, 
+						ranging from small three-person indie teams to a large corporate owned studio handling major IPs.
 						<br><br>
 						Get in touch and let's make some games!
 					</p>
@@ -93,7 +92,6 @@
 		</div>
 
 		<div class="toggle-section" id="games-section" style="display: none;">
-			
 			<!-- SONIC FORCES -->
 			<a href="https://play.google.com/store/apps/details?id=com.sega.sprint&hl=en&gl=US" target="_blank">
 				<div class="game-container">
@@ -185,7 +183,11 @@
 			});
 
 			var sectionList = ["about-section", "games-section", "art-section"];
-		
+			var toggledSectionButton = null;
+
+			/* Set default section */
+				toggleSection('about-section')
+
 			let images = [
 				'assets/images/3DCreature.jpg',
 				'assets/images/bobot.jpg',
@@ -195,7 +197,7 @@
 
 			let index = -1;
 			const imgElement = document.querySelector('#changing-image');
-
+			
 			function change() {
 				index === images.length - 1 ? index = 0 : index++;
 				imgElement.src = images[index];
@@ -216,17 +218,17 @@
 				sectionList.forEach(function (section) {
 					if(element === section)
 						return;
-					x = document.getElementById(section);					
-					if(x.style.display !== "none"){
-						x.style.display = "none";
+					sectionElement = document.getElementById(section);					
+					if(sectionElement.style.display !== "none"){
+						sectionElement.style.display = "none";
 					}
 				});
 
-				var x = document.getElementById(element);
-				if (x.style.display === "none") {
-					x.style.display = "block";
+				var sectionElement = document.getElementById(element);
+				if (sectionElement.style.display === "none") {
+					sectionElement.style.display = "block";
 				} else {
-					x.style.display = "none";
+					sectionElement.style.display = "none";
 				}
 			}
 		</script>
