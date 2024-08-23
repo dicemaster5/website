@@ -11,9 +11,10 @@ body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: rgb(31, 31, 31);
+	background: #222222;
 	font-family: "IBM Plex Serif";
 	/* font-family: "Segoe UI", sans-serif, verdana; alt font */
+	font-size: medium;
 	color: rgb(255, 255, 255);
 	align-items: center;
 }
@@ -58,6 +59,8 @@ a {
 	width: fit-content;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	max-height: 400px;
+
 }
 
 #changing-image {
@@ -66,8 +69,7 @@ a {
 	margin-right:auto;
 	object-fit: contain;
 	width: 100%;
-	max-height:  400px;
-
+	max-height: inherit;
 	border-radius: 20px;
 	overflow: clip;
 }
@@ -104,7 +106,6 @@ a {
 /* Toggle section */
 
 .toggle-section {
-	padding: 10px;
 	border-radius: 5px;
 	/* background-color: rgba(73, 73, 73, 0.288); */
 }
@@ -128,16 +129,9 @@ a {
 	margin: 10px;
 }
 
-/* Hides my face when below 600px width */
-@media only screen and (max-width: 600px) {
-	#my-face-img {
-		display: none;
-	}
-}
-
 #my-face-img img {
 	border-radius: 200px;
-	width: 200px;
+	width: 150px;
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -158,8 +152,8 @@ a {
 .game-container {
     display: flex;
 	border-radius: 5px;
-	margin: 10px;
-	height: 180px;
+	margin: 10px 0px;
+	height: 220px;
 	transition: transform .25s;
 }
 
@@ -169,22 +163,22 @@ a {
 }
 
 .game-info {
-	margin: 10px;
+	padding: 10px;
 	width: 66.66%;
+	text-overflow: ellipsis;
 	overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .game-image {
-	width: 33.33%;
-	padding: 10px;
+	padding: 12px;
+	aspect-ratio: 16/9;
 }
 
 .game-image img{
 	object-fit: cover;
-	width:100%;
-	height:100%;
-	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
 }
 
 /* Art Section */
@@ -208,24 +202,38 @@ a {
   vertical-align: middle;
 }
 
+/* changes things when screen is below 600px width */
+@media only screen and (max-width: 600px) {
+	#my-face-img {
+		display: none;
+	}
+
+	[class*="game-info"] {
+		width: calc(100%);
+	}
+	.game-image {
+		display: none;
+	}
+}
+
 /* hover elements */
 
 @media (hover: hover) and (pointer: fine) {
 
-.main-navbar-button:hover{
-	color: orange;
-	cursor: pointer;
-	transform: scale(1.15);
-}
+	.main-navbar-button:hover{
+		color: orange;
+		cursor: pointer;
+		transform: scale(1.15);
+	}
 
-.game-container:hover {
-	background-color: rgba(134, 134, 134, 0.185);
-	transform: scale(1.025);
-}
+	.game-container:hover {
+		background-color: rgba(134, 134, 134, 0.185);
+		transform: scale(1.025);
+	}
 
-.icon-link:hover {
-	color: orange;
-	transform: scale(1.15) rotate(-8deg);
-}
+	.icon-link:hover {
+		color: orange;
+		transform: scale(1.15) rotate(-8deg);
+	}
 
 }
