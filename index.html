@@ -17,14 +17,17 @@
 
 	<script type="module">
 		// Include Lightbox 
-		import PhotoSwipeLightbox from './photoswipe/photoswipe-lightbox.esm.js';
+		import PhotoSwipeLightbox from '/photoswipe/photoswipe-lightbox.esm.js';
+
 		const lightbox = new PhotoSwipeLightbox({
-			// may select multiple "galleries"
-			gallery: '#my-gallery',
-			// Elements within gallery (slides)
-			children: 'a',
-			// setup PhotoSwipe Core dynamic import
-			pswpModule: () => import('./photoswipe/photoswipe.esm.js')
+		// may select multiple "galleries"
+		gallery: '#gallery--getting-started',
+
+		// Elements within gallery (slides)
+		children: 'a',
+
+		// setup PhotoSwipe Core dynamic import
+		pswpModule: () => import('/photoswipe/photoswipe.esm.js')
 		});
 		lightbox.init();
 	</script>
@@ -208,34 +211,81 @@
 		<div class="toggle-section" id="art-section" style="display: none;">
 			<h2 class="section-title">Art stuff</h2>
 
-			<div class="pswp-gallery pswp-gallery--single-column" id="gallery--getting-started">
-				<a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" 
-				data-pswp-width="1669" 
-				data-pswp-height="2500" 
-				target="_blank">
-				<img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="" />
-			  </a>
-			</div>
-
 			<!-- ~Artwork goes here~ -->
-			<div class="row">
+			<div class="pswp-gallery pswp-gallery--single-column row" id="gallery--getting-started">
 				<div class="column">
-					<img src="assets/images/art/dragonface.jpg" style="width:100%">
-					<img src="assets/images/art/DragonNoodle.jpg" style="width:100%">
-					<img src="assets/images/art/oni2d.png" style="width:100%">
-					<img src="assets/images/art/basilisk.jpg" style="width:100%">
+					<a href="assets/images/art/dragonface.jpg"
+						data-pswp-width="947" 
+						data-pswp-height="805"
+						target="_blank">
+						<img src="assets/images/art/dragonface.jpg" style="width:100%">
+					</a>
+					<a href="assets/images/art/DragonNoodle.jpg"
+						data-pswp-width="1920" 
+						data-pswp-height="1080"
+						target="_blank">
+						<img src="assets/images/art/DragonNoodle.jpg" style="width:100%">
+					</a>
+					<a href="assets/images/art/oni2d.png"
+						data-pswp-width="1616" 
+						data-pswp-height="1005"
+						target="_blank">
+						<img src="assets/images/art/oni2d.png" style="width:100%">
+					</a>
+					<a href="assets/images/art/basilisk.jpg"
+						data-pswp-width="1602" 
+						data-pswp-height="1372"
+						target="_blank">
+						<img src="assets/images/art/basilisk.jpg" style="width:100%">
+					</a>
 				</div>
+				
 				<div class="column">
-					<img src="assets/images/art/3DCreature.jpg" style="width:100%">
-					<img src="assets/images/art/dragon.jpg" style="width:100%">
-					<!-- <img src="/assets/images/art/oni.png" style="width:100%"> -->
-					<img src="assets/images/art/vampire.jpg" style="width:100%">
+					<a href="assets/images/art/3DCreature.jpg"
+						data-pswp-width="947" 
+						data-pswp-height="805"
+						target="_blank">
+						<img src="assets/images/art/3DCreature.jpg" style="width:100%">
+					</a>
+					<a href="assets/images/art/dragon.jpg"
+						data-pswp-width="1920" 
+						data-pswp-height="1080"
+						target="_blank">
+						<img src="assets/images/art/dragon.jpg" style="width:100%">
+					</a>
+					<a href="assets/images/art/vampire.jpg"
+						data-pswp-width="1616" 
+						data-pswp-height="1005"
+						target="_blank">
+						<img src="assets/images/art/vampire.jpg" style="width:100%">
+					</a>
 				</div>
+
 				<div class="column">
-					<img src="assets/images/art/pumpkins.png" style="width:100%">
-					<img src="assets/images/art/2DCreature.jpg" style="width:100%">
-					<img src="assets/images/art/bobot.jpg" style="width:100%">
-					<img src="assets/images/art/kaiju.jpg" style="width:100%">
+					<a href="assets/images/art/pumpkins.png"
+						data-pswp-width="947" 
+						data-pswp-height="805"
+						target="_blank">
+						<img src="assets/images/art/pumpkins.png" style="width:100%">
+					</a>
+					<a href="assets/images/art/2DCreature.jpg"
+						data-pswp-width="1920" 
+						data-pswp-height="1080"
+						target="_blank">
+						<img src="assets/images/art/2DCreature.jpg" style="width:100%">
+					</a>
+					<a href="assets/images/art/bobot.jpg"
+						data-pswp-width="1616" 
+						data-pswp-height="1005"
+						target="_blank">
+						<img src="assets/images/art/bobot.jpg" style="width:100%">
+					</a>
+					<a href="assets/images/art/kaiju.jpg"
+						data-pswp-width="1602" 
+						data-pswp-height="1372"
+						target="_blank">
+						<img src="assets/images/art/kaiju.jpg" style="width:100%">
+					</a>
 				</div>
 			</div>
 		</div>
