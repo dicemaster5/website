@@ -20,14 +20,13 @@
 		import PhotoSwipeLightbox from '/photoswipe/photoswipe-lightbox.esm.js';
 
 		const lightbox = new PhotoSwipeLightbox({
-		// may select multiple "galleries"
-		gallery: '#gallery--getting-started',
-
-		// Elements within gallery (slides)
-		children: 'a',
-
-		// setup PhotoSwipe Core dynamic import
-		pswpModule: () => import('/photoswipe/photoswipe.esm.js')
+			// may select multiple "galleries"
+			gallery: '#pswp-gallery',
+			// Elements within gallery (slides)
+			children: 'a',
+			// setup PhotoSwipe Core dynamic import
+			pswpModule: () => import('/photoswipe/photoswipe.esm.js'),
+			wheelToZoom: true
 		});
 		lightbox.init();
 	</script>
@@ -212,7 +211,7 @@
 			<h2 class="section-title">Art stuff</h2>
 
 			<!-- ~Artwork goes here~ -->
-			<div class="pswp-gallery pswp-gallery--single-column row" id="gallery--getting-started">
+			<div class="pswp-gallery row" id="pswp-gallery">
 				<div class="column">
 					<a href="assets/images/art/dragonface.jpg"
 						data-pswp-width="947" 
@@ -242,47 +241,53 @@
 				
 				<div class="column">
 					<a href="assets/images/art/3DCreature.jpg"
-						data-pswp-width="947" 
-						data-pswp-height="805"
+						data-pswp-width="1246" 
+						data-pswp-height="1252"
 						target="_blank">
 						<img src="assets/images/art/3DCreature.jpg" style="width:100%">
 					</a>
 					<a href="assets/images/art/dragon.jpg"
-						data-pswp-width="1920" 
-						data-pswp-height="1080"
+						data-pswp-width="1028" 
+						data-pswp-height="820"
 						target="_blank">
 						<img src="assets/images/art/dragon.jpg" style="width:100%">
 					</a>
 					<a href="assets/images/art/vampire.jpg"
-						data-pswp-width="1616" 
-						data-pswp-height="1005"
+						data-pswp-width="938" 
+						data-pswp-height="901"
 						target="_blank">
 						<img src="assets/images/art/vampire.jpg" style="width:100%">
 					</a>
+					<a href="assets/images/art/oni.png"
+						data-pswp-width="1320" 
+						data-pswp-height="808"
+						target="_blank">
+					<img src="assets/images/art/oni.png" style="width:100%" alt="Render of the oni.">
+				</a>
 				</div>
 
 				<div class="column">
 					<a href="assets/images/art/pumpkins.png"
-						data-pswp-width="947" 
-						data-pswp-height="805"
+						data-pswp-width="1920" 
+						data-pswp-height="1080"
 						target="_blank">
 						<img src="assets/images/art/pumpkins.png" style="width:100%">
 					</a>
 					<a href="assets/images/art/2DCreature.jpg"
-						data-pswp-width="1920" 
-						data-pswp-height="1080"
+						data-pswp-width="711" 
+						data-pswp-height="908"
 						target="_blank">
 						<img src="assets/images/art/2DCreature.jpg" style="width:100%">
 					</a>
 					<a href="assets/images/art/bobot.jpg"
-						data-pswp-width="1616" 
-						data-pswp-height="1005"
+						data-pswp-width="2560" 
+						data-pswp-height="1440"
 						target="_blank">
 						<img src="assets/images/art/bobot.jpg" style="width:100%">
 					</a>
 					<a href="assets/images/art/kaiju.jpg"
-						data-pswp-width="1602" 
-						data-pswp-height="1372"
+						data-pswp-width="1025" 
+						data-pswp-height="905"
 						target="_blank">
 						<img src="assets/images/art/kaiju.jpg" style="width:100%">
 					</a>
