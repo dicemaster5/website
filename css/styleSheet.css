@@ -34,6 +34,24 @@ a {
     user-select: none;
 }
 
+.button {
+	background-color:rgb(237, 142, 0);
+	border: none;
+	color: white;
+	padding: 6px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 6px;
+  }
+
+  .button:hover {
+	transition-duration: 0.4s;
+	background-color:rgb(255, 194, 103);
+	color: white;
+  }
+
 /* Main Page Layout */
 
 #main-content {

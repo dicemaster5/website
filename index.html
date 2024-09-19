@@ -53,13 +53,13 @@
 			/
 			<button onclick="toggleSection('art-section')" class="main-navbar-button">art</button>
 			/
-			<button onclick="location.href='assets/SamAuberResume.pdf'" class="main-navbar-button">resume</button>
+			<button onclick="toggleSection('resume-section')" class="main-navbar-button">resume</button>
 		</div>
 
 		<div class="toggle-section" id="about-section" style="display: none;">
 			<div id="text-and-image">
 				<div id="my-face-img" class="basic-protect">
-					<img src="assets/images/myface.jpg" draggable="false" alt="Me">
+					<img src="./assets/images/myface.jpg" draggable="false" alt="Me">
 				</div>
 				<div id="about-text">
 					<p>
@@ -294,14 +294,25 @@
 				</div>
 			</div>
 		</div>
-		
+
+		<div class="toggle-section" id="resume-section" style="display: none;">
+			<!-- <button onclick="location.href='assets/SamAuberResume.pdf'" class="main-navbar-button">Open in new page</button> -->
+			<button onclick="window.open('assets/SamAuberResume.pdf')" class="button">Open in new page</button>
+
+			<object class="pdf" 
+				data="assets/SamAuberResume.pdf"
+				width="800"
+				height="1000">
+			</object>
+		</div>
+
 		<script>
 			/* Disable right-click menu on page */
 			document.addEventListener('contextmenu', function (event) {
 				event.preventDefault()
 			});
 
-			var sectionList = ["about-section", "games-section", "art-section"];
+			var sectionList = ["about-section", "games-section", "art-section", "resume-section"];
 			var toggledSectionButton = null;
 
 			/* Set default section */
