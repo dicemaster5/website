@@ -39,18 +39,14 @@ a {
 	border: none;
 	color: white;
 	padding: 6px 16px;
-	text-align: center;
 	text-decoration: none;
-	display: inline-block;
 	font-size: 16px;
 	border-radius: 6px;
-  }
-
-  .button:hover {
-	transition-duration: 0.4s;
-	background-color:rgb(255, 194, 103);
-	color: white;
-  }
+	margin: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /* Main Page Layout */
 
@@ -214,6 +210,16 @@ a {
   padding: 0 4px;
 }
 
+/* Resume Section */
+
+.pdf-viewer {
+	margin: auto;
+	width: 100%;
+	height: 1000px;
+	border-radius: 8px;
+
+}
+
 /* Create two equal columns that sits next to each other */
 .column {
   flex: 20%;
@@ -237,11 +243,23 @@ a {
 	.game-image {
 		display: none;
 	}
+
+	.pdf-viewer {
+		width: 100%;
+		height: 600px;
+	}
 }
 
 /* Hover elements */
 
 @media (hover: hover) and (pointer: fine) {
+
+	.button:hover {
+		transition-duration: 0.4s;
+		background-color:rgb(255, 194, 103);
+		cursor: pointer;
+		color: white;
+	}
 
 	.main-navbar-button:hover{
 		color: orange;
