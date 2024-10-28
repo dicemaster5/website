@@ -3,19 +3,19 @@
 
 <head>
 	<meta charset="utf-8">
+
+	<!-- Style Sheets -->
+	<link rel="stylesheet" href="./css/styleSheet.css">
+	<link rel="stylesheet" href="./photoswipe/photoswipe.css">
+
 	<link rel="icon" href="./assets/images/myface.jpg" />
-	<title>Sam Auber</title>
-	<meta name="description" content="Another game developer portfolio website.">
+	<title>Sam Auber - Game Dev</title>
+	<meta name="description" content="Sam Auber - portfolio website.">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<script src="https://kit.fontawesome.com/7af026b303.js" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" href="./css/styleSheet.css">
-	<link rel="stylesheet" href="./photoswipe/photoswipe.css">
-
-	<!-- <script defer src="./js/script.js"></script> -->
-
-	<script type="module">
+	<script type="module"> // Script for photoswipe
 		// Include Lightbox 
 		import PhotoSwipeLightbox from './photoswipe/photoswipe-lightbox.esm.js';
 
@@ -30,20 +30,75 @@
 		});
 		lightbox.init();
 	</script>
+
+	<script> // Script for toggle sections
+		/* Disable right-click menu on page */
+		document.addEventListener('contextmenu', function (event) {
+			event.preventDefault()
+		});
+
+		var sectionList = ["about-section", "games-section", "art-section", "resume-section"];
+		var toggledSectionButton = null;
+
+		let images = [
+			'assets/images/art/3DCreature.jpg',
+			'assets/images/art/bobot.jpg',
+			'assets/images/art/DragonNoodle.jpg',
+			'assets/images/art/hellohand.jpg'
+		];
+
+		let index = -1;
+		const imgElement = document.querySelector('#changing-image');
+
+		function getRandomImage(imgAr) {
+			var num = Math.floor(Math.random() * imgAr.length);
+			var img = imgAr[num];
+			imgElement.src = imgAr[num];
+		}
+
+		function change() {
+				index === images.length - 1 ? index = 0 : index++;
+				imgElement.src = images[index];
+		}
+
+		window.onload = function () {
+			/* Set default section */
+			// toggleSection('games-section')
+
+			//getRandomImage(images);
+			//setInterval(change, 10000);
+		};
+
+		function toggleSection(element) {	
+			sectionList.forEach(function (section) {
+				if(element === section)
+					return;
+				sectionElement = document.getElementById(section);					
+				if(sectionElement.style.display !== "none"){
+					sectionElement.style.display = "none";
+				}
+			});
+
+			var sectionElement = document.getElementById(element);
+			if (sectionElement.style.display === "none") {
+				sectionElement.style.display = "block";
+			} else {
+				sectionElement.style.display = "none";
+			}
+		}
+	</script>
 </head>
 
 <body>
 	<div id="main-content">
 		<div id="main-text">
-			<h1 id="main-name">
-				Sam Auber
-			</h1>
 			<p id="main-sub-text">
-				Game Developer & Digital Artist
+				<span id="main-name">Sam Auber</span>- Game Developer & Digital Artist
 			</p>
 		</div>
+
 		<div id="main-image-container" class="basic-protect">
-			<img id="changing-image" class="basic-protect" draggable="false" src="assets/images/art/DragonNoodle.jpg">
+			<img id="changing-image" class="basic-protect" draggable="false" src="assets/images/art/BasiliskBanner.jpg">
 		</div>
 
 		<div id="main-navbar">
@@ -65,7 +120,7 @@
 					<p>
 						Hey! I'm Sam 👋
 						<br>
-						I’m a game developer and digital artist with a passion for creating unique player experiences through immersive and artistic environments.
+						I’m a game developer and digital artist passionate about creating unique player experiences through immersive and artistic environments.
 						<br><br>
 						I have over 6 years of experience in various aspects of game development with a focus in programming and tech art.
 						<br><br>
@@ -77,6 +132,12 @@
 						<div class="icon-link">
 							<a class="icon-link" href="mailto:samauber@yahoo.co.uk" target="_blank">
 								<i class="far fa-envelope fa-xl"></i>
+							</a>
+						</div>
+
+						<div class="icon-link">
+							<a class="icon-link" href="https://bsky.app/profile/dicedbasilisk.bsky.social" target="_blank">
+								<i class="fa-brands fa-bluesky fa-xl"></i>
 							</a>
 						</div>
 
@@ -110,103 +171,51 @@
 
 		<div class="toggle-section" id="games-section" style="display: none;">
 			<h2 class="section-title">Games I've worked on</h2>
-
-			<!-- TOWN BOX GAME -->
-			<a href="https://store.steampowered.com/app/2906440/Townbox/" target="_blank">
-				<div class="game-container">
-					<div class="game-info">
-						<h3 class="game-info-title">Townbox</h3>
-						<p>A single player sandbox town building game with an emphasis on creativity and self expression! Take on the
-						role of trainee town planner and expand your teeny-tiny starting island into a bustling town of your own design.</p>
-					</div>
-					
-					<div class="game-image">
-						<img src='assets/images/game/Townbox.jpg' alt="Game Image">
-					</div>
-				</div>
-			</a>
-
-			<!-- SONIC FORCES -->
-			<a href="https://play.google.com/store/apps/details?id=com.sega.sprint&hl=en&gl=US" target="_blank">
-				<div class="game-container">
-					<div class="game-image">
-						<img src='assets/images/game/sonicForces.png' alt="Game Image">
-					</div>
-					<div class="game-info">
-						<h3 class="game-info-title">Sonic Forces: Speed Battles</h3>
-						<p>A casual multiplayer racing & battle game from SEGA! Run, race, and compete in multiplayer 
-							running games with real players from around the world!</p>
-					</div>
-				</div>
-			</a>
-
-			<!-- PPC GAME -->
-			<a href="https://dangerzone-ga.itch.io/ppc" target="_blank">
-				<div class="game-container">
-					<div class="game-info">
-						<h3 class="game-info-title">Planetary Pest Control</h3>
-						<p>An asymmetrical 2-player couch co-op action game where you control two unique characters, each with distinctive
-						abilities and synergies. Play across 6 levels, offering up to 2 hours of gameplay, all set
-						on a vibrant fungal planet brought to life in a striking comic book style.</p>
-					</div>
-					<div class="game-image">
-						<img src='assets/images/game/PPC.jpg' alt="Game Image">
-					</div>
-				</div>
-			</a>
-
-			<!-- ZEPHYR GAME -->
-			<a href="https://endclouddigital.itch.io/zephyr-the-cloud-odyssey" target="_blank">
-				<div class="game-container">
-					<div class="game-image">
-						<img src='assets/images/game/Zephyr.png' alt="Game Image">
-					</div>
-					<div class="game-info">
-						<h3 class="game-info-title">Zephyr: The Cloud Odyssey</h3>
-						<p>A first-person speedrunning platformer where players race across floating islands, dodging deadly traps to collect artifact pieces as quickly as possible.</p>
-					</div>
-				</div>
-			</a>
-
-			<!-- LOST TO BE FOUND -->
-			<a href="https://jiheh.itch.io/lost-to-be-found" target="_blank">
-				<div class="game-container">
-					<div class="game-info">
-						<h3 class="game-info-title">Lost To Be Found</h3>
-						<p>A short relaxing treasure hunting game made for the 2021 Global Game Jam.
-							Made in a team of 3 at the Spelkollektivet game dev house. You can play it in your browser right now!
-						</p>
-					</div>
-					<div class="game-image">
-						<img src='https://img.itch.zone/aW1hZ2UvOTA1MjU1LzUxMTQwMDcucG5n/original/nVV%2BLy.png' alt="Game Image">
-					</div>
-				</div>
-			</a>
-
-			<!-- ITCH PAGE -->
-			<a href="https://dicedbasilisk.itch.io/" target="_blank">
-				<div class="game-container">
-					<div class="game-image">
-						<img src='https://i.pcmag.com/imagery/reviews/044PXMK6FlED1dNwOXkecXV-4.fit_lim.size_1050x591.v1597354669.jpg' alt="Itch">
-					</div>
-						<h3 class="game-info-title"> ⬅ More games over on my itch page!</h3>
-				</div>
-			</a>
-
-			<!-- CYBERBUGS GAME -->
-			<!-- <a href="https://store.steampowered.com/app/1768430/Cyberbugs/" target="_blank">
-				<div class="game-container">
-					<div class="game-image">
-						<img src='assets/images/game/cyberbugs.jpg' alt="Game Image">
-					</div>
-					<div class="game-info">
-						<h3 class="game-info-title">Cyberbugs</h3>
-						<p>First person speedrunning platformer in which the player is tasked with traversing floating islands and
-							avoiding dangerous traps in order to find artefact pieces in as quickly as possible.</p>
-					</div>
-				</div>
-			</a> -->
 			
+			<div class="game-cards-container">
+				<div class="game-card"> <!-- TOWNBOX -->
+					<a href="https://store.steampowered.com/app/2906440/Townbox/" class="basic-protect"  draggable="false" target="_blank">					
+						<div class="game-card-image">
+							<img src='assets/images/game/townbox_card.png' draggable="false" alt="Game Image">
+						</div>
+					</a>
+				</div>
+				<div class="game-card"> <!-- SONIC -->
+					<a href="https://play.google.com/store/apps/details?id=com.sega.sprint&hl=en&gl=US" class="basic-protect"  draggable="false" target="_blank">					
+						<div class="game-card-image">
+							<img src='assets/images/game/sonic_card.png' draggable="false" alt="Game Image">
+						</div>
+					</a>
+				</div>
+				<div class="game-card"> <!-- PPC -->
+					<a href="https://dangerzone-ga.itch.io/ppc" class="basic-protect"  draggable="false" target="_blank">					
+						<div class="game-card-image">
+							<img src='assets/images/game/ppc_card.png' draggable="false" alt="Game Image">
+						</div>
+					</a>
+				</div>
+				<div class="game-card"> <!-- ZEPHYR -->
+					<a href="https://endclouddigital.itch.io/zephyr-the-cloud-odyssey" class="basic-protect"  draggable="false" target="_blank">					
+						<div class="game-card-image">
+							<img src='assets/images/game/zephyr_card.png' draggable="false" alt="Game Image">
+						</div>
+					</a>
+				</div>
+				<div class="game-card"> <!-- LOST TO BE FOUND -->
+					<a href="https://jiheh.itch.io/lost-to-be-found" class="basic-protect"  draggable="false" target="_blank">					
+						<div class="game-card-image">
+							<img src='assets/images/game/lost_found_card.png' draggable="false" alt="Game Image">
+						</div>
+					</a>
+				</div>
+				<div class="game-card"> <!-- ITCH LINK -->
+					<a href="https://dicedbasilisk.itch.io/" class="basic-protect"  draggable="false" target="_blank">					
+						<div class="game-card-image">
+							<img src='assets/images/game/itch_card.png' draggable="false" alt="Itch">
+						</div>
+					</a>
+				</div>
+			</div>
 		</div>
 
 		<div class="toggle-section" id="art-section" style="display: none;">
@@ -298,67 +307,10 @@
 		</div>
 
 		<div class="toggle-section" id="resume-section" style="display: none;">
-			<!-- <button onclick="location.href='assets/SamAuberResume.pdf'" class="main-navbar-button">Open in new page</button> -->
 			<button onclick="window.open('assets/SamAuberResume.pdf')" class="button">Open in new page</button>
 			<object class="pdf-viewer" data="assets/SamAuberResume.pdf">
 			</object>
 		</div>
 
-		<script>
-			/* Disable right-click menu on page */
-			document.addEventListener('contextmenu', function (event) {
-				event.preventDefault()
-			});
-
-			var sectionList = ["about-section", "games-section", "art-section", "resume-section"];
-			var toggledSectionButton = null;
-
-			/* Set default section */
-				toggleSection('about-section')
-
-			let images = [
-				'assets/images/art/3DCreature.jpg',
-				'assets/images/art/bobot.jpg',
-				'assets/images/art/DragonNoodle.jpg',
-				'assets/images/art/hellohand.jpg'
-			];
-
-			let index = -1;
-			const imgElement = document.querySelector('#changing-image');
-
-			function getRandomImage(imgAr) {
-				var num = Math.floor(Math.random() * imgAr.length);
-				var img = imgAr[num];
-				imgElement.src = imgAr[num];
-			}
-
-			function change() {
-					index === images.length - 1 ? index = 0 : index++;
-					imgElement.src = images[index];
-			}
-
-			window.onload = function () {
-				//getRandomImage(images);
-				//setInterval(change, 10000);
-			};
-
-			function toggleSection(element) {	
-				sectionList.forEach(function (section) {
-					if(element === section)
-						return;
-					sectionElement = document.getElementById(section);					
-					if(sectionElement.style.display !== "none"){
-						sectionElement.style.display = "none";
-					}
-				});
-
-				var sectionElement = document.getElementById(element);
-				if (sectionElement.style.display === "none") {
-					sectionElement.style.display = "block";
-				} else {
-					sectionElement.style.display = "none";
-				}
-			}
-		</script>
 	</div>
 </body>
