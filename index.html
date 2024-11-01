@@ -69,17 +69,27 @@
 			//setInterval(change, 10000);
 		};
 
-		function toggleSection(element) {	
+		function toggleSection(sectionId, button) {
+			// Loop through each section and hide it unless it's the selected section.
 			sectionList.forEach(function (section) {
-				if(element === section)
+				if(sectionId === section)
 					return;
-				sectionElement = document.getElementById(section);					
+				
+				sectionElement = document.getElementById(section);
 				if(sectionElement.style.display !== "none"){
 					sectionElement.style.display = "none";
 				}
 			});
 
-			var sectionElement = document.getElementById(element);
+			// Toggle the active navbar button.
+			if(toggledSectionButton !== null && toggledSectionButton !== button){
+				toggledSectionButton.classList.toggle("active_navbar_button")
+			}
+			toggledSectionButton = button
+			toggledSectionButton.classList.toggle("active_navbar_button")
+
+			// Show the current selected section.
+			var sectionElement = document.getElementById(sectionId);
 			if (sectionElement.style.display === "none") {
 				sectionElement.style.display = "block";
 			} else {
@@ -102,13 +112,13 @@
 		</div>
 
 		<div id="main-navbar">
-			<button onclick="toggleSection('about-section')" class="main-navbar-button">about</button>
+			<button onclick="toggleSection('about-section', this)" class="main-navbar-button">about</button>
 			/
-			<button onclick="toggleSection('games-section')" class="main-navbar-button">games</button>
+			<button onclick="toggleSection('games-section', this)" class="main-navbar-button">games</button>
 			/
-			<button onclick="toggleSection('art-section')" class="main-navbar-button">art</button>
+			<button onclick="toggleSection('art-section', this)" class="main-navbar-button">art</button>
 			/
-			<button onclick="toggleSection('resume-section')" class="main-navbar-button">resume</button>
+			<button onclick="toggleSection('resume-section', this)" class="main-navbar-button">resume</button>
 		</div>
 
 		<div class="toggle-section" id="about-section" style="display: none;">
@@ -242,12 +252,18 @@
 						target="_blank">
 						<img src="assets/images/art/oni2d.png" style="width:100%">
 					</a>
-					<a href="assets/images/art/basilisk.jpg"
+					<a href="assets/images/art/basilisk3d.png"
+						data-pswp-width="1216" 
+						data-pswp-height="1268"
+						target="_blank">
+						<img src="assets/images/art/basilisk3d.png" style="width:100%">
+					</a>
+					<!-- <a href="assets/images/art/basilisk.jpg"
 						data-pswp-width="1602" 
 						data-pswp-height="1372"
 						target="_blank">
 						<img src="assets/images/art/basilisk.jpg" style="width:100%">
-					</a>
+					</a> -->
 				</div>
 				
 				<div class="column">

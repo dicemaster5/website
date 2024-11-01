@@ -78,7 +78,6 @@ a {
 }
 
 
-
 #main-text	{
 	display: block;
 	text-align: center;
@@ -110,6 +109,10 @@ a {
 	font-family: inherit;
 	border: none;
 	transition: transform .2s cubic-bezier(.53,.41,.61,1.73);
+}
+
+.active_navbar_button {
+	color: orange;
 }
 
 
