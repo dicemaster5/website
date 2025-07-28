@@ -5,10 +5,10 @@
 	<meta charset="utf-8">
 
 	<!-- Style Sheets -->
-	<link rel="stylesheet" href="/css/styleSheet.css">
-	<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+	<link rel="stylesheet" href="./css/styleSheet.css">
+	<link rel="stylesheet" href="./photoswipe/photoswipe.css">
 
-	<link rel="icon" href="/assets/images/myface.jpg" />
+	<link rel="icon" href="./assets/images/myface.jpg" />
 	<title>Sam Auber - Game Dev</title>
 	<meta name="description" content="Sam Auber - portfolio website.">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,7 +17,7 @@
 
 	<script type="module"> // Script for photoswipe
 		// Include Lightbox 
-		import PhotoSwipeLightbox from '/photoswipe/photoswipe-lightbox.esm.js';
+		import PhotoSwipeLightbox from './photoswipe/photoswipe-lightbox.esm.js';
 
 		const lightbox = new PhotoSwipeLightbox({
 			// may select multiple "galleries"
@@ -25,7 +25,7 @@
 			// Elements within gallery (slides)
 			children: 'a',
 			// setup PhotoSwipe Core dynamic import
-			pswpModule: () => import('/photoswipe/photoswipe.esm.js'),
+			pswpModule: () => import('./photoswipe/photoswipe.esm.js'),
 			wheelToZoom: true
 		});
 		lightbox.init();
