@@ -5,10 +5,10 @@
 	<meta charset="utf-8">
 
 	<!-- Style Sheets -->
-	<link rel="stylesheet" href="./css/styleSheet.css">
-	<link rel="stylesheet" href="./photoswipe/photoswipe.css">
+	<link rel="stylesheet" href="/css/styleSheet.css">
+	<link rel="stylesheet" href="/photoswipe/photoswipe.css">
 
-	<link rel="icon" href="./assets/images/myface.jpg" />
+	<link rel="icon" href="/assets/images/myface.jpg" />
 	<title>Sam Auber - Game Dev</title>
 	<meta name="description" content="Sam Auber - portfolio website.">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,7 +17,7 @@
 
 	<script type="module"> // Script for photoswipe
 		// Include Lightbox 
-		import PhotoSwipeLightbox from './photoswipe/photoswipe-lightbox.esm.js';
+		import PhotoSwipeLightbox from '/photoswipe/photoswipe-lightbox.esm.js';
 
 		const lightbox = new PhotoSwipeLightbox({
 			// may select multiple "galleries"
@@ -25,7 +25,7 @@
 			// Elements within gallery (slides)
 			children: 'a',
 			// setup PhotoSwipe Core dynamic import
-			pswpModule: () => import('./photoswipe/photoswipe.esm.js'),
+			pswpModule: () => import('/photoswipe/photoswipe.esm.js'),
 			wheelToZoom: true
 		});
 		lightbox.init();
@@ -41,10 +41,10 @@
 		var toggledSectionButton = null;
 
 		let images = [
-			'assets/images/art/3DCreature.jpg',
-			'assets/images/art/bobot.jpg',
-			'assets/images/art/DragonNoodle.jpg',
-			'assets/images/art/hellohand.jpg'
+			'/assets/images/art/3DCreature.jpg',
+			'/assets/images/art/bobot.jpg',
+			'/assets/images/art/DragonNoodle.jpg',
+			'/assets/images/art/hellohand.jpg'
 		];
 
 		let index = -1;
@@ -108,7 +108,7 @@
 		</div>
 
 		<div id="main-image-container" class="basic-protect">
-			<img id="changing-image" class="basic-protect" draggable="false" src="assets/images/art/BasiliskBanner.jpg">
+			<img id="changing-image" class="basic-protect" draggable="false" src="/assets/images/art/BasiliskBanner.jpg">
 		</div>
 
 		<div id="main-navbar">
@@ -124,7 +124,7 @@
 		<div class="toggle-section" id="about-section" style="display: none;">
 			<div id="text-and-image">
 				<div id="my-face-img" class="basic-protect">
-					<img src="./assets/images/myface.jpg" draggable="false" alt="Me">
+					<img src="/assets/images/myface.jpg" draggable="false" alt="Me">
 				</div>
 				<div id="about-text">
 					<p>
@@ -186,49 +186,63 @@
 				<div class="game-card"> <!-- SALVAGE PROTOCOL -->
 					<a href="https://store.steampowered.com/app/3358680?utm_source=folio" class="basic-protect"  draggable="false" target="_blank">					
 						<div class="game-card-image">
-							<img src='assets/images/game/salvage_protocol_card.png' draggable="false" alt="Game Image">
+							<img src='/assets/images/game/salvage_protocol_card.png' draggable="false" alt="Game Image">
 						</div>
 					</a>
 				</div>
 				<div class="game-card"> <!-- TOWNBOX -->
 					<a href="https://store.steampowered.com/app/2906440/Townbox/" class="basic-protect"  draggable="false" target="_blank">					
 						<div class="game-card-image">
-							<img src='assets/images/game/townbox_card.png' draggable="false" alt="Game Image">
+							<img src='/assets/images/game/townbox_card.png' draggable="false" alt="Game Image">
 						</div>
 					</a>
 				</div>
 				<div class="game-card"> <!-- SONIC -->
 					<a href="https://play.google.com/store/apps/details?id=com.sega.sprint&hl=en&gl=US" class="basic-protect"  draggable="false" target="_blank">					
 						<div class="game-card-image">
-							<img src='assets/images/game/sonic_card.png' draggable="false" alt="Game Image">
+							<img src='/assets/images/game/sonic_card.png' draggable="false" alt="Game Image">
+						</div>
+					</a>
+				</div>
+				<div class="game-card"> <!-- CC SWITCH PORT -->
+					<a href="https://www.nintendo.com/us/store/" class="basic-protect"  draggable="false" target="_blank">					
+						<div class="game-card-image">
+							<img src='/assets/images/game/cc_port_card.png' draggable="false" alt="Game Image">
 						</div>
 					</a>
 				</div>
 				<div class="game-card"> <!-- PPC -->
 					<a href="https://dangerzone-ga.itch.io/ppc" class="basic-protect"  draggable="false" target="_blank">					
 						<div class="game-card-image">
-							<img src='assets/images/game/ppc_card.png' draggable="false" alt="Game Image">
+							<img src='/assets/images/game/ppc_card.png' draggable="false" alt="Game Image">
 						</div>
 					</a>
 				</div>
 				<div class="game-card"> <!-- ZEPHYR -->
 					<a href="https://endclouddigital.itch.io/zephyr-the-cloud-odyssey" class="basic-protect"  draggable="false" target="_blank">					
 						<div class="game-card-image">
-							<img src='assets/images/game/zephyr_card.png' draggable="false" alt="Game Image">
+							<img src='/assets/images/game/zephyr_card.png' draggable="false" alt="Game Image">
+						</div>
+					</a>
+				</div>
+				<div class="game-card"> <!-- CARCINISATAN -->
+					<a href="https://dicedbasilisk.itch.io/carcinisatan" class="basic-protect"  draggable="false" target="_blank">					
+						<div class="game-card-image">
+							<img src='/assets/images/game/carcinisatan_card.png' draggable="false" alt="Game Image">
 						</div>
 					</a>
 				</div>
 				<div class="game-card"> <!-- LOST TO BE FOUND -->
 					<a href="https://jiheh.itch.io/lost-to-be-found" class="basic-protect"  draggable="false" target="_blank">					
 						<div class="game-card-image">
-							<img src='assets/images/game/lost_found_card.png' draggable="false" alt="Game Image">
+							<img src='/assets/images/game/lost_found_card.png' draggable="false" alt="Game Image">
 						</div>
 					</a>
 				</div>
 				<div class="game-card"> <!-- ITCH LINK -->
 					<a href="https://dicedbasilisk.itch.io/" class="basic-protect"  draggable="false" target="_blank">					
 						<div class="game-card-image">
-							<img src='assets/images/game/itch_card.png' draggable="false" alt="Itch">
+							<img src='/assets/images/game/itch_card.png' draggable="false" alt="Itch">
 						</div>
 					</a>
 				</div>
@@ -241,97 +255,97 @@
 			<!-- ~Artwork goes here~ -->
 			<div class="pswp-gallery row" id="pswp-gallery">
 				<div class="column">
-					<a class="art-card" href="assets/images/art/dragonface.jpg"
+					<a class="art-card" href="/assets/images/art/dragonface.jpg"
 						data-pswp-width="947" 
 						data-pswp-height="805"
 						target="_blank">
-						<img src="assets/images/art/dragonface.jpg" style="width:100%">
+						<img src="/assets/images/art/dragonface.jpg" style="width:100%">
 					</a>
-					<a class="art-card" href="assets/images/art/DragonNoodle.jpg"
+					<a class="art-card" href="/assets/images/art/DragonNoodle.jpg"
 						data-pswp-width="1920" 
 						data-pswp-height="1080"
 						target="_blank">
-						<img src="assets/images/art/DragonNoodle.jpg" style="width:100%">
+						<img src="/assets/images/art/DragonNoodle.jpg" style="width:100%">
 					</a>
-					<a class="art-card" href="assets/images/art/oni2d.png"
+					<a class="art-card" href="/assets/images/art/oni2d.png"
 						data-pswp-width="1616" 
 						data-pswp-height="1005"
 						target="_blank">
-						<img src="assets/images/art/oni2d.png" style="width:100%">
+						<img src="/assets/images/art/oni2d.png" style="width:100%">
 					</a>
-					<a class="art-card" href="assets/images/art/basilisk3d.png"
+					<a class="art-card" href="/assets/images/art/basilisk3d.png"
 						data-pswp-width="1216" 
 						data-pswp-height="1268"
 						target="_blank">
-						<img src="assets/images/art/basilisk3d.png" style="width:100%">
+						<img src="/assets/images/art/basilisk3d.png" style="width:100%">
 					</a>
-					<!-- <a class="art-card" href="assets/images/art/basilisk.jpg"
+					<!-- <a class="art-card" href="/assets/images/art/basilisk.jpg"
 						data-pswp-width="1602" 
 						data-pswp-height="1372"
 						target="_blank">
-						<img src="assets/images/art/basilisk.jpg" style="width:100%">
+						<img src="/assets/images/art/basilisk.jpg" style="width:100%">
 					</a> -->
 				</div>
 				
 				<div class="column">
-					<a class="art-card" href="assets/images/art/3DCreature.jpg"
+					<a class="art-card" href="/assets/images/art/3DCreature.jpg"
 						data-pswp-width="1246" 
 						data-pswp-height="1252"
 						target="_blank">
-						<img src="assets/images/art/3DCreature.jpg" style="width:100%">
+						<img src="/assets/images/art/3DCreature.jpg" style="width:100%">
 					</a>
-					<a class="art-card" href="assets/images/art/dragon.jpg"
+					<a class="art-card" href="/assets/images/art/dragon.jpg"
 						data-pswp-width="1028" 
 						data-pswp-height="820"
 						target="_blank">
-						<img src="assets/images/art/dragon.jpg" style="width:100%">
+						<img src="/assets/images/art/dragon.jpg" style="width:100%">
 					</a>
-					<a class="art-card" href="assets/images/art/vampire.jpg"
+					<a class="art-card" href="/assets/images/art/vampire.jpg"
 						data-pswp-width="938" 
 						data-pswp-height="901"
 						target="_blank">
-						<img src="assets/images/art/vampire.jpg" style="width:100%">
+						<img src="/assets/images/art/vampire.jpg" style="width:100%">
 					</a>
-					<a class="art-card" href="assets/images/art/oni.png"
+					<a class="art-card" href="/assets/images/art/oni.png"
 						data-pswp-width="1320" 
 						data-pswp-height="808"
 						target="_blank">
-					<img src="assets/images/art/oni.png" style="width:100%">
+					<img src="/assets/images/art/oni.png" style="width:100%">
 				</a>
 				</div>
 
 				<div class="column">
-					<a class="art-card" href="assets/images/art/pumpkins.png"
+					<a class="art-card" href="/assets/images/art/pumpkins.png"
 						data-pswp-width="1920" 
 						data-pswp-height="1080"
 						target="_blank">
-						<img src="assets/images/art/pumpkins.png" style="width:100%">
+						<img src="/assets/images/art/pumpkins.png" style="width:100%">
 					</a>
-					<a class="art-card" href="assets/images/art/2DCreature.jpg"
+					<a class="art-card" href="/assets/images/art/2DCreature.jpg"
 						data-pswp-width="711" 
 						data-pswp-height="908"
 						target="_blank">
-						<img src="assets/images/art/2DCreature.jpg" style="width:100%">
+						<img src="/assets/images/art/2DCreature.jpg" style="width:100%">
 					</a>
-					<a class="art-card" href="assets/images/art/bobot.jpg"
+					<a class="art-card" href="/assets/images/art/bobot.jpg"
 						data-pswp-width="2560" 
 						data-pswp-height="1440"
 						target="_blank">
-						<img src="assets/images/art/bobot.jpg" style="width:100%">
+						<img src="/assets/images/art/bobot.jpg" style="width:100%">
 					</a>
-					<a class="art-card" href="assets/images/art/kaiju.jpg"
+					<a class="art-card" href="/assets/images/art/kaiju.jpg"
 						data-pswp-width="1025" 
 						data-pswp-height="905"
 						target="_blank">
-						<img src="assets/images/art/kaiju.jpg" style="width:100%">
+						<img src="/assets/images/art/kaiju.jpg" style="width:100%">
 					</a>
 				</div>
 			</div>
 		</div>
 
 		<div class="toggle-section" id="resume-section" style="display: none;">
-			<button onclick="window.open('assets/SamAuberResume.pdf')" class="button">Open in new page</button>
-			<object class="pdf-viewer" data="assets/SamAuberResume.pdf">
+			<button onclick="window.open('/assets/SamAuberResume.pdf')" class="button">Open in new page</button>
+			<object class="pdf-viewer" data="/assets/SamAuberResume.pdf">
 			</object>
 		</div>
 
